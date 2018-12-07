@@ -52,6 +52,23 @@ class UserDataViewController: UIViewController, UINavigationControllerDelegate, 
     }
 }
     
+    @IBAction func okuButton(_ sender: Any) {
+        let databaseRef = Database.database().reference()
+        
+        databaseRef.child("UserProfile").observe(.value) { (snapshot) in
+            let values = snapshot.value! as! NSDictionary
+            let gonderi = values["Gonderi"] as! NSDictionary
+            let postID = gonderi.allKeys
+            print(postID)
+            
+            for id in postID {
+                let post = gonderi[id] as! NSDictionary
+                self.adArray.append(post["AD"] as! String)
+                //let ad = post ["AD"] as! String
+            }
+            print(self.adArray)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         image.isUserInteractionEnabled = true

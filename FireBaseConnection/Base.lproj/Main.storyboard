@@ -101,6 +101,14 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Rijksmuseum en Tram 2KoenSmildePhotography" translatesAutoresizingMaskIntoConstraints="NO" id="Tc8-me-gn2">
                                 <rect key="frame" x="45" y="83" width="284" height="159"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oro-tV-M3Y">
+                                <rect key="frame" x="173" y="468" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Oku"/>
+                                <connections>
+                                    <action selector="okuButton:" destination="0V1-Wz-s4y" eventType="touchUpInside" id="kO5-29-THz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
